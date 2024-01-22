@@ -1,0 +1,23 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules":
+  [
+    {
+      "enabled": false,
+      "matchPackageNames": ["typescript", "zone.js"],
+      "matchUpdateTypes": ["major", "minor"]
+    }
+  ],
+  "postUpgradeTasks":
+  {
+    "commands":
+    [
+      "node --version"
+    ],
+    "fileFilters":
+    [
+      "dev/typescript/package-lock.json"
+    ],
+    "executionMode": "branch"
+  }
+}
